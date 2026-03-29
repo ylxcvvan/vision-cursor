@@ -1,0 +1,30 @@
+# mediapipe
+vision_cursor_add_test_executable(MediaPipeHandDetectorTests mediapipe/tst_mediapipe_hand_detector.cpp)
+
+#vision
+vision_cursor_add_test_executable(VisionBasicTests vision/tst_camera_basic.cpp)
+vision_cursor_add_test_executable(CameraDeviceTests vision/tst_camera_device.cpp)
+vision_cursor_add_test_executable(CameraManagerTests vision/tst_camera_manager.cpp)
+
+#algorithm
+vision_cursor_add_test_executable(AlgorithmMathTests algorithm/tst_each_filter_math.cpp)
+vision_cursor_add_test_executable(AlgorithmVisualTests algorithm/tst_each_filter_visual.cpp)
+
+#interaction
+vision_cursor_add_test_executable(StateMachineSchemeTests interaction/tst_state_machine_scheme.cpp)
+vision_cursor_add_test_executable(InteractionControllerTests interaction/tst_interaction_controller.cpp)
+vision_cursor_add_test_executable(CalReferenceLengthFuncTests interaction/tst_calculate_reference_length_func.cpp)
+
+
+#mapping
+vision_cursor_add_test_executable(ActionMapperTests mapping/tst_action_mapper.cpp)
+
+#device
+vision_cursor_add_test_executable(MouseControllerTests device/tst_mouse_controller.cpp)
+
+#core
+vision_cursor_add_test_executable(CoreModuleTests core/tst_core_orchestrator.cpp)
+
+#config
+vision_cursor_add_test_executable(CoreConfigTests config/tst_core_config.cpp)
+vision_cursor_add_test_executable(FsmConfigTests config/tst_fsm_config.cpp)

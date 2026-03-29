@@ -1,0 +1,569 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SchemeControlPage</class>
+ <widget class="QWidget" name="SchemeControlPage">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1012</width>
+    <height>688</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>SchemeControlPage</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+   QWidget#SchemeControlPage {
+    background-color: #ffffff;
+    color: #1f2937;
+    font-family: &quot;Segoe UI&quot;, &quot;Microsoft YaHei&quot;, sans-serif;
+}
+
+QFrame#frameTitle,
+QFrame#frameBottomButtons {
+    background-color: #ffffff;
+    border: 1px solid #dbe3ee;
+    border-radius: 14px;
+}
+
+QGroupBox {
+    background-color: #ffffff;
+    border: 1px solid #dbe3ee;
+    border-radius: 10px;
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #1f2937;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    left: 12px;
+    padding: 2px 8px;
+    color: #1f2937;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+QLabel#labelPageTitle {
+    color: #1f2937;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+QLabel#labelPageHint,
+QLabel#labelBottomHint {
+    color: #6b7280;
+    font-size: 12px;
+}
+
+QLabel[role=&quot;fieldName&quot;] {
+    color: #374151;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+QLineEdit,
+QComboBox,
+QSpinBox,
+QDoubleSpinBox {
+    min-height: 30px;
+    background-color: #ffffff;
+    border: 1px solid #cfd8e3;
+    border-radius: 8px;
+    color: #111827;
+    font-size: 14px;
+}
+
+QLineEdit {
+    padding: 5px 10px;
+}
+
+QLineEdit:hover,
+QComboBox:hover,
+QSpinBox:hover,
+QDoubleSpinBox:hover {
+    border: 1px solid #93c5fd;
+}
+
+QLineEdit:focus,
+QComboBox:focus,
+QSpinBox:focus,
+QDoubleSpinBox:focus {
+    border: 1px solid #2563eb;
+    background-color: #ffffff;
+}
+
+QComboBox {
+    padding: 5px 28px 5px 10px;
+}
+
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 26px;
+    background-color: #e9eef5;
+    border-left: 1px solid #cfd8e3;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+}
+
+QComboBox::drop-down:hover {
+    background-color: #dbeafe;
+}
+
+QComboBox::drop-down:pressed {
+    background-color: #bfdbfe;
+}
+
+QComboBox::down-arrow {
+    width: 9px;
+    height: 9px;
+}
+
+QSpinBox,
+QDoubleSpinBox {
+    padding: 5px 40px 5px 10px;
+    font-weight: 600;
+}
+
+QSpinBox::up-button,
+QDoubleSpinBox::up-button,
+QSpinBox::down-button,
+QDoubleSpinBox::down-button {
+    subcontrol-origin: border;
+    width: 20px;
+    background-color: #c9d4e2;
+    border-left: 1px solid #b4c0cf;
+}
+
+QSpinBox::up-button,
+QDoubleSpinBox::up-button {
+    subcontrol-position: top right;
+    border-top-right-radius: 7px;
+    border-bottom: 1px solid #9fb0c4;
+    margin: 1px 1px 0 0;
+}
+
+QSpinBox::down-button,
+QDoubleSpinBox::down-button {
+    subcontrol-position: bottom right;
+    border-bottom-right-radius: 7px;
+    border-top: 1px solid #dfe7f0;
+    margin: 0 1px 1px 0;
+}
+
+QSpinBox::up-button:hover,
+QDoubleSpinBox::up-button:hover,
+QSpinBox::down-button:hover,
+QDoubleSpinBox::down-button:hover {
+    background-color: #b8d4fb;
+}
+
+QSpinBox::up-button:pressed,
+QDoubleSpinBox::up-button:pressed,
+QSpinBox::down-button:pressed,
+QDoubleSpinBox::down-button:pressed {
+    background-color: #93c5fd;
+}
+
+QPushButton {
+    background-color: #ffffff;
+    border: 1px solid #dbe3ee;
+    border-radius: 10px;
+    padding: 7px 14px;
+    color: #1f2937;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+QPushButton:hover {
+    background-color: #eef4ff;
+    border: 1px solid #bfdbfe;
+}
+
+QPushButton:pressed {
+    background-color: #dbeafe;
+}
+
+QPlainTextEdit {
+    background-color: #ffffff;
+    color: #111827;
+    border: 1px solid #cfd8e3;
+    border-radius: 8px;
+    padding: 8px;
+    font-family: Consolas, &quot;Courier New&quot;, monospace;
+    font-size: 13px;
+}
+
+QPlainTextEdit:hover {
+    border: 1px solid #93c5fd;
+}
+
+QPlainTextEdit:focus {
+    border: 1px solid #2563eb;
+    background-color: #ffffff;
+}
+
+QScrollArea {
+    border: none;
+    background: transparent;
+}</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayoutMain">
+   <property name="spacing">
+    <number>6</number>
+   </property>
+   <property name="leftMargin">
+    <number>4</number>
+   </property>
+   <property name="topMargin">
+    <number>4</number>
+   </property>
+   <property name="rightMargin">
+    <number>4</number>
+   </property>
+   <property name="bottomMargin">
+    <number>4</number>
+   </property>
+   <item>
+    <widget class="QFrame" name="frameTitle">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>60</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>60</height>
+      </size>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Shape::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Shadow::Plain</enum>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayoutTitle">
+      <property name="spacing">
+       <number>10</number>
+      </property>
+      <property name="leftMargin">
+       <number>12</number>
+      </property>
+      <property name="topMargin">
+       <number>10</number>
+      </property>
+      <property name="rightMargin">
+       <number>12</number>
+      </property>
+      <property name="bottomMargin">
+       <number>10</number>
+      </property>
+      <item>
+       <widget class="QLabel" name="labelPageTitle">
+        <property name="text">
+         <string>自定义手势控制方案</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="labelPageHint">
+        <property name="text">
+         <string>管理预设方案、JSON 方案文件与方案测试入口</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacerTitle">
+        <property name="orientation">
+         <enum>Qt::Orientation::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayoutContent">
+     <property name="spacing">
+      <number>6</number>
+     </property>
+     <property name="leftMargin">
+      <number>0</number>
+     </property>
+     <property name="topMargin">
+      <number>0</number>
+     </property>
+     <property name="rightMargin">
+      <number>0</number>
+     </property>
+     <property name="bottomMargin">
+      <number>0</number>
+     </property>
+     <item>
+      <widget class="QGroupBox" name="groupBoxPreset">
+       <property name="title">
+        <string>预设方案</string>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayoutPreset">
+        <property name="spacing">
+         <number>8</number>
+        </property>
+        <property name="leftMargin">
+         <number>10</number>
+        </property>
+        <property name="topMargin">
+         <number>12</number>
+        </property>
+        <property name="rightMargin">
+         <number>10</number>
+        </property>
+        <property name="bottomMargin">
+         <number>10</number>
+        </property>
+        <item>
+         <widget class="QLabel" name="labelPresetSchemeText">
+          <property name="text">
+           <string>选择预设方案</string>
+          </property>
+          <property name="role" stdset="0">
+           <string>fieldName</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="comboBoxPresetScheme">
+          <property name="minimumSize">
+           <size>
+            <width>220</width>
+            <height>42</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnGeneratePreset">
+          <property name="text">
+           <string>生成预设</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnExplainPreset">
+          <property name="text">
+           <string>说明</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacerPreset">
+          <property name="orientation">
+           <enum>Qt::Orientation::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QWidget" name="ContentWidget" native="true">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QSplitter" name="splitter">
+          <property name="orientation">
+           <enum>Qt::Orientation::Horizontal</enum>
+          </property>
+          <widget class="QGroupBox" name="groupBoxJsonEditor">
+           <property name="title">
+            <string>当前方案 JSON 内容</string>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayoutJsonEditor">
+            <property name="spacing">
+             <number>6</number>
+            </property>
+            <property name="leftMargin">
+             <number>10</number>
+            </property>
+            <property name="topMargin">
+             <number>12</number>
+            </property>
+            <property name="rightMargin">
+             <number>10</number>
+            </property>
+            <property name="bottomMargin">
+             <number>10</number>
+            </property>
+            <item>
+             <widget class="QPlainTextEdit" name="plainTextEditSchemeJson">
+              <property name="minimumSize">
+               <size>
+                <width>400</width>
+                <height>420</height>
+               </size>
+              </property>
+              <property name="placeholderText">
+               <string>在此显示或编辑当前方案 JSON 内容...</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QGroupBox" name="groupBoxJsonRule">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>999999</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="title">
+            <string>JSON 编写规则说明</string>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayoutJsonRule">
+            <property name="spacing">
+             <number>6</number>
+            </property>
+            <property name="leftMargin">
+             <number>10</number>
+            </property>
+            <property name="topMargin">
+             <number>12</number>
+            </property>
+            <property name="rightMargin">
+             <number>10</number>
+            </property>
+            <property name="bottomMargin">
+             <number>10</number>
+            </property>
+            <item>
+             <widget class="QPlainTextEdit" name="plainTextEditJsonRule">
+              <property name="readOnly">
+               <bool>true</bool>
+              </property>
+              <property name="placeholderText">
+               <string>此处显示 JSON 编写规则、字段示例与注意事项...</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QFrame" name="frameBottomButtons">
+     <property name="frameShape">
+      <enum>QFrame::Shape::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Shadow::Plain</enum>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayoutBottomButtons">
+      <property name="spacing">
+       <number>8</number>
+      </property>
+      <property name="leftMargin">
+       <number>10</number>
+      </property>
+      <property name="topMargin">
+       <number>8</number>
+      </property>
+      <property name="rightMargin">
+       <number>10</number>
+      </property>
+      <property name="bottomMargin">
+       <number>8</number>
+      </property>
+      <item>
+       <widget class="QPushButton" name="btnLoadJson">
+        <property name="text">
+         <string>读取自定义方案</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnTestScheme">
+        <property name="text">
+         <string>测试方案可行性</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnSaveJson">
+        <property name="text">
+         <string>保存自定义方案</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacerBottomButtons">
+        <property name="orientation">
+         <enum>Qt::Orientation::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QLabel" name="labelBottomHint">
+        <property name="text">
+         <string>注：该部分 JSON 可使用 AI 辅助生成</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

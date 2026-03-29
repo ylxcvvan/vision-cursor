@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/">
+        <file alias="icons/vision_cursor.png">vision_cursor.png</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>InformationPage</class>
+ <widget class="QWidget" name="InformationPage">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>902</width>
+    <height>702</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>InformationPage</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget#InformationPage {
+    background-color: transparent;
+    color: #1f2937;
+    font-family: &quot;Segoe UI&quot;, &quot;Microsoft YaHei&quot;, sans-serif;
+}
+
+QFrame#frameTitle,
+QFrame#frameBody {
+    background-color: #ffffff;
+    border: 1px solid #dbe3ee;
+    border-radius: 14px;
+}
+
+QLabel#labelPageTitle {
+    color: #1f2937;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+QLabel#labelPageHint {
+    color: #6b7280;
+    font-size: 12px;
+}
+
+QTextBrowser#textBrowserSystemDesc {
+    background-color: #f8fafc;
+    border: 1px solid #dbe3ee;
+    border-radius: 10px;
+    padding: 8px;
+    font-size: 13px;
+}
+
+QPushButton {
+    background-color: #ffffff;
+    border: 1px solid #dbe3ee;
+    border-radius: 12px;
+    padding: 8px 14px;
+    color: #1f2937;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+QPushButton:hover {
+    background-color: #eef4ff;
+    border: 1px solid #bfdbfe;
+}
+
+QPushButton:pressed {
+    background-color: #dbeafe;
+}</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayoutMain">
+   <property name="spacing">
+    <number>8</number>
+   </property>
+   <property name="leftMargin">
+    <number>4</number>
+   </property>
+   <property name="topMargin">
+    <number>4</number>
+   </property>
+   <property name="rightMargin">
+    <number>4</number>
+   </property>
+   <property name="bottomMargin">
+    <number>4</number>
+   </property>
+   <item>
+    <widget class="QFrame" name="frameTitle">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>60</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>60</height>
+      </size>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Shape::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Shadow::Plain</enum>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayoutTitle">
+      <property name="spacing">
+       <number>10</number>
+      </property>
+      <property name="leftMargin">
+       <number>12</number>
+      </property>
+      <property name="topMargin">
+       <number>10</number>
+      </property>
+      <property name="rightMargin">
+       <number>12</number>
+      </property>
+      <property name="bottomMargin">
+       <number>10</number>
+      </property>
+      <item>
+       <widget class="QLabel" name="labelPageTitle">
+        <property name="text">
+         <string>系统说明</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="labelPageHint">
+        <property name="text">
+         <string>项目依赖、框架版本与开源规则</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacerTitle">
+        <property name="orientation">
+         <enum>Qt::Orientation::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnAboutQt">
+        <property name="minimumSize">
+         <size>
+          <width>108</width>
+          <height>36</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>关于 Qt</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QFrame" name="frameBody">
+     <property name="frameShape">
+      <enum>QFrame::Shape::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Shadow::Plain</enum>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayoutBody">
+      <property name="spacing">
+       <number>10</number>
+      </property>
+      <property name="leftMargin">
+       <number>10</number>
+      </property>
+      <property name="topMargin">
+       <number>10</number>
+      </property>
+      <property name="rightMargin">
+       <number>10</number>
+      </property>
+      <property name="bottomMargin">
+       <number>10</number>
+      </property>
+      <item>
+       <widget class="QTextBrowser" name="textBrowserSystemDesc">
+        <property name="openExternalLinks">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

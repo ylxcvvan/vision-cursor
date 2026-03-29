@@ -1,0 +1,2 @@
+vision_cursor_add_test_executable(handLandmarkDemoTests tst_hand_landmark.cpp)
+vision_cursor_add_test_executable(AllModulesTests tst_all_modules.cpp)
